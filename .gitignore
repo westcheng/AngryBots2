@@ -37,3 +37,7 @@ sysinfo.txt
 /AngryBots2_Project/.idea
 /AngryBots2_Project/Logs
 /AngryBots2_Project/UserSettings
+/AngryBots2_Project/Il2CppBackup
+*.app
+*.hap
+.DS_Store
