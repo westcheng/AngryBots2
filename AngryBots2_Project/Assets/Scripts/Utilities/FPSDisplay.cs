@@ -5,6 +5,11 @@ public class FPSDisplay : MonoBehaviour
 {
     public Text fpsText;
 
+    public float updateInterval = 0.2F;
+    private double lastInterval;
+    private int frames = 0;
+    private float fps;
+    
 	float deltaTime;
 	
 	void Update ()
@@ -15,8 +20,19 @@ public class FPSDisplay : MonoBehaviour
 
 	void SetFPS()
 	{
-		float msec = deltaTime * 1000.0f;
-		float fps = 1.0f / deltaTime;
-		fpsText.text = string.Format("FPS: {0:00.} ({1:00.0} ms)", fps, msec);
+		UnityEngine.Profiling.Profiler.BeginSample("Custom Update");
+		
+		++frames;
+		float timeNow = Time.realtimeSinceStartup;
+		if (timeNow > lastInterval + updateInterval)
+		{
+			fps = (float)(frames / (timeNow - lastInterval));
+			frames = 0;
+			lastInterval = timeNow;
+		}
+
+		fpsText.text = string.Format("FPS: {0:00.}", fps);
+		
+		UnityEngine.Profiling.Profiler.EndSample();
 	}
 }

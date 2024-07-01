@@ -25,7 +25,7 @@ public class DebugCanvasManager : MonoBehaviour
 
     void Start()
     {
-        HideUI();
+        //HideUI();
     }
 
     void HideUI()
