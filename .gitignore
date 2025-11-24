@@ -41,3 +41,4 @@ sysinfo.txt
 *.app
 *.hap
 .DS_Store
+/AngryBots2_Project/Packages/com.unity.burst@1.8.21

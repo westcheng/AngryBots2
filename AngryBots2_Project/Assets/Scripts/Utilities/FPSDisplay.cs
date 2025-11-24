@@ -31,7 +31,7 @@ public class FPSDisplay : MonoBehaviour
 			lastInterval = timeNow;
 		}
 
-		fpsText.text = string.Format("FPS: {0:00.}", fps);
+		fpsText.text = string.Format("FPS: {0:00.0}", fps);
 		
 		UnityEngine.Profiling.Profiler.EndSample();
 	}
