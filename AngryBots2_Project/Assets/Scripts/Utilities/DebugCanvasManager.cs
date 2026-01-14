@@ -31,7 +31,7 @@ public class DebugCanvasManager : MonoBehaviour
     void HideUI()
     {
         debugWindow.enabled = false;
-        fpsDisplay.SetActive(false);
+        //fpsDisplay.SetActive(false);
     }
 
     public void ToggleDebugWindow(bool newState)
