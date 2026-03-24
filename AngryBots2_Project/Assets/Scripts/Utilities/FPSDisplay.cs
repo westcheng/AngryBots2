@@ -1,17 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class FPSDisplay : MonoBehaviour
 {
     public Text fpsText;
 
-    public float updateInterval = 0.2F;
+    public float updateInterval = 2.0F;
     private double lastInterval;
     private int frames = 0;
     private float fps;
     
 	float deltaTime;
-	
+
+	void Start()
+	{
+		Application.targetFrameRate = 60;
+	}
+
 	void Update ()
 	{
 		deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;

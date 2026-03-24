@@ -16498,7 +16498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsText: {fileID: 976571820}
-  updateInterval: 0.2
+  updateInterval: 1
 --- !u!4 &986228445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7033243969484710107, guid: 14e4931ed5a71a14ab1ddb4f674667f3,
